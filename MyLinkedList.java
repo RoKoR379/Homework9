@@ -73,7 +73,7 @@ public class MyLinkedList {
     }
 
 
-    public void get(int index) {
+    public Object get(int index) {
         int i = 0;
         boolean flag = false;
 
@@ -81,7 +81,7 @@ public class MyLinkedList {
 
         if(head == null) {
             System.out.println("List is empty");
-            return;
+            return 0;
         }
         while(current != null) {
 
@@ -93,9 +93,9 @@ public class MyLinkedList {
             i++;
         }
         if(flag)
-            System.out.println(current.item);
+            return current.item;
         else
-            System.out.println("Node is not present in the list");
+            return "Node is not present in the list";
     }
 
     public static void main(String[] args) {
@@ -106,7 +106,7 @@ public class MyLinkedList {
         list.add(4);
         list.add(5);
         list.remove(2);
-        list.get(2);
+        System.out.println(list.get(2));
         list.printNodes();
         list.clear();
         list.printNodes();
