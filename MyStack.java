@@ -32,8 +32,8 @@ public class MyStack {
     public void clear(){
         newArray = new Object[0];
     }
-    public void size(){
-        System.out.println(newArray.length);
+    public int size(){
+        return newArray.length;
     }
     public void pop(){
         if(myArray.length == 0){
@@ -60,12 +60,12 @@ public class MyStack {
         array.push("3");
         array.size();
         array.remove(2);
-        array.size();
+        System.out.println(array.size());
         array.pop();
-        array.size();
+        System.out.println(array.size());
         array.peek();
         array.clear();
-        array.size();
+        System.out.println(array.size());
 
     }
 }

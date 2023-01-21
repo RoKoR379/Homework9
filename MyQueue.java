@@ -39,19 +39,19 @@ public class MyQueue {
     public void clear(){
         newArray = new Object[0];
     }
-    public void size(){
-        System.out.println(newArray.length);
+    public int size(){
+        return newArray.length;
     }
     public static void main(String[] args) {
         MyQueue array = new MyQueue();
         array.add("1");
         array.add("2");
         array.add("3");
-        array.size();
+        System.out.println(array.size());
         array.pool();
         array.peek();
         array.clear();
-        array.size();
+        System.out.println(array.size());
 
 
 
