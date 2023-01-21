@@ -32,11 +32,11 @@ public class MyArrayList {
     public void clear(){
         newArray = new Object[0];
     }
-    public void size(){
-        System.out.println(newArray.length);
+    public int size(){
+        return newArray.length;
     }
-    public void get(int index){
-        System.out.println(newArray[index]);
+    public Object get(int index){
+        return newArray[index];
     }
     public static void main(String[] args) {
         MyArrayList array = new MyArrayList();
@@ -45,9 +45,9 @@ public class MyArrayList {
         array.add("3");
         //array.clear();
         array.remove(2);
-        array.size();
-        array.get(0);
-        array.get(1);
+        System.out.println(array.size());
+        System.out.println(array.get(0));
+        System.out.println(array.get(1));
 
 
     }
